@@ -1,0 +1,34 @@
+// This is a program that gets a list of integers from input. 
+//The input begins with an integer indicating the number of integers that follow. 
+//Then, get the last value from the input, which indicates a threshold. 
+//Output all integers less than or equal to that last threshold value.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+	vector<int> nums;
+	int i;
+	int inputs;
+	int listNums;
+	int t;
+	
+	cin >> inputs;
+
+	for(i = 0; i < inputs; ++i ){
+		cin >> listNums;
+		nums.push_back(listNums);
+		}
+
+	t = nums.at(num.size()-1);
+	
+		for(i = 0; i < inputs; ++i){
+	   if(nums.at(i) <= t){
+		   
+	   
+	   cout << nums.at(i) << ",";
+		   }
+		}
+
+   return 0;
+}
