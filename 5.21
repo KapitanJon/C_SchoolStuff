@@ -1,0 +1,38 @@
+//Adjust list by normalizing
+// This program adjust the values by dividing all values by the largest value. 
+//The input begins with an integer indicating the number of floating-point values that follow.
+
+#include <iostream>
+#include <iomanip>
+#include <vector>
+using namespace std;
+
+int main() {
+	int i;
+	int inputs;
+	float listNums;
+	vector<float> nums;
+	float largeval;
+	cin >> inputs;
+
+	for(i = 0; i < inputs; i++){
+		cin >> listNums;
+		nums.push_back(listNums);
+	}
+
+	largeval = nums.at(0);
+	
+	for(i = 0; i < inputs; i++){
+		if(largeval < nums.at(i)){
+			largeval = nums.at(i);
+		}
+	}
+
+	for(i = 0; i < inputs; i++){
+		cout << fixed << setprecision(2);
+		cout << nums.at(i)/largeval << ' ';
+	}
+	cout << endl;
+
+   return 0;
+}
