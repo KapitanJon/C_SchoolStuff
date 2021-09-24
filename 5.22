@@ -1,0 +1,34 @@
+//This program reads a list of words. 
+//Then, the program outputs those words and their frequencies. 
+//The input begins with an integer indicating the number of words that follow. 
+//Assume that the list will always contain fewer than 20 words.
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+	int inputs;
+	int j;
+	int i;
+	string words;
+	vector<string> sentence;
+	int count;
+	cin >> inputs;
+
+	for(i = 0 ; i < inputs ; ++i){
+		cin >> words;
+		sentence.push_back(words);
+		}
+
+	for(i = 0; i < inputs; ++i){
+		count = 0;
+		for(j = 0; j < inputs; ++j){
+			if(sentence.at(i) == sentence.at(j)){
+				count+=1;
+			}
+			}	
+				cout << sentence.at(i) <<  " - " << count<< endl;
+		}
+   return 0;
+}
