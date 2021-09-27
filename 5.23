@@ -1,0 +1,45 @@
+// This program reads an integer, a list of words, and a character. 
+//The integer signifies how many words are in the list. 
+//The output of the program is every word in the list that contains the character at least once. 
+//For coding simplicity, follow each output word by a comma, even the last one. 
+//Assume at least one word in the list will contain the given character.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+	int i;
+	int inputs;
+	vector<string> sentence;
+	string words;
+	char letter;
+	string tempString;
+	int letter_val;
+
+	cin >> inputs;
+
+	for(i = 0; i < inputs; ++i){
+		cin >> words;
+		sentence.push_back(words);
+	}
+
+	cin >> letter;
+
+	for(i = 0; i < inputs; ++i){
+		tempString = sentence.at(i);
+		letter_val = tempString.find(letter);
+		if(letter_val > -1){
+			cout << sentence.at(i) << ",";
+			
+		}
+	cout << endl;
+		
+	}
+	// Prints out whole vector
+
+	//for(i = 0; i < inputs; ++i){
+	//	cout << sentence.at(i) << " ";
+	// }
+
+   return 0;
+}
