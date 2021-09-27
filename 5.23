@@ -32,9 +32,8 @@ int main() {
 			cout << sentence.at(i) << ",";
 			
 		}
-	cout << endl;
-		
 	}
+	cout << endl;
 	// Prints out whole vector
 
 	//for(i = 0; i < inputs; ++i){
